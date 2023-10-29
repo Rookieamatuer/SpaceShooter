@@ -47,11 +47,11 @@ public class AsteroidRotation : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        // Compute player direction朝向玩家的方向
-        Vector3 direction = (player.position - transform.position).normalized;
+        // 计算垂直向下的移动方向
+        Vector3 movement = -1 * Vector3.forward * moveSpeed * Time.deltaTime;
 
-        // Move toward player
-        transform.Translate(direction * moveSpeed * Time.deltaTime, Space.World);
+        // 应用移动
+        transform.Translate(movement, Space.World);
     }
 
     private void OnTriggerEnter(Collider other)
