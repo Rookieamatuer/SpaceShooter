@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     private Rigidbody rb;
 
     public GameObject bolts;
-    public float fireRate = 0.5f; // Shoot rate
+    public float fireRate = 0.1f; // Shoot rate
     private float nextFireTime = 0.0f;
 
     private void Start()
